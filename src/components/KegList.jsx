@@ -23,7 +23,7 @@ var postList = [
   }
 ];
 
-function LocationsNew(){
+function KegList(){
   return (
     <div>
       <style jsx>{`
@@ -56,4 +56,4 @@ function LocationsNew(){
   );
 }
 
-export default LocationsNew;
+export default KegList;

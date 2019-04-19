@@ -30,10 +30,10 @@ function Post(props){
 }
 
 Post.propTypes = {
-  day: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  hours: PropTypes.string.isRequired,
-  booth: PropTypes.string.isRequired
+  beer: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  percent: PropTypes.string.isRequired,
+  cost: PropTypes.string.isRequired
 };
 
 export default Post;

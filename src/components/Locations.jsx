@@ -1,6 +1,6 @@
 import React from 'react';
 import AvailableProduce from './AvailableProduce';
-import LocationsNew from './LocationsNew';
+import KegList from './KegList';
 
 function Locations(){
   return (
@@ -12,7 +12,7 @@ function Locations(){
           grid-template-columns: 200px auto;
         }
        `}</style>
-      <LocationsNew/>
+      <KegList/>
       <AvailableProduce/>
     </div>
   );
