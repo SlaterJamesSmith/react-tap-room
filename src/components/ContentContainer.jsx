@@ -41,7 +41,7 @@ function ContentContainer(){
       <img src={market}/>
       <Switch>
         <Route exact path='/' component={Locations} />
-        <Route path='/contact' component={Admin} />
+        <Route path='/admin' component={Admin} />
         <Route component={Error404} />
       </Switch>
     </div>

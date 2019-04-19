@@ -20,10 +20,10 @@ function Post(props){
          }
        `}</style>
       <ul>
-        <li><h3>{props.day}s</h3></li>
-        <li><h4>{props.location}</h4></li>
-        <li><p>{props.hours}</p></li>
-        <li><p>Booth: {props.booth}</p></li>
+        <li><h3>{props.beer}</h3></li>
+        <li><h4>{props.brand}</h4></li>
+        <li><p>{props.percent}%</p></li>
+        <li><p>${props.cost}</p></li>
       </ul>
     </div>
   );

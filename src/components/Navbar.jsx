@@ -6,13 +6,14 @@ function Navbar(){
   var styledNavbar = {
     display: 'flex',
     // backgroundColor: 'lightblue',
-    paddingTop: '50px',
+    paddingTop: '10px',
+    paddingBottom: '50px',
     color: 'white',
     fontFamily: 'arial',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    height: '400px',
+    height: '200px',
     padding: '0',
     backgroundImage: 'url(' + fruitStand + ')',
     backgroundSize: 'cover',
@@ -21,7 +22,9 @@ function Navbar(){
     borderBottom: '5px black solid'
   };
   var styledHeader = {
-    fontSize: '80px'
+    fontSize: '40px',
+    paddingBottom: '0',
+    marginBottom: '10px'
   };
   var styledLink = {
     color: 'white',
@@ -31,9 +34,9 @@ function Navbar(){
   };
   return (
     <div style={styledNavbar}>
-      <h1 style={styledHeader}>Avery's Organics</h1>
+      <h1 style={styledHeader}>Tap List App</h1>
       <span>
-        <Link style={styledLink} to="/">home</Link> | <Link style={styledLink} to="/contact">contact</Link>
+        <Link style={styledLink} to="/">list</Link> | <Link style={styledLink} to="/admin">admin</Link>
       </span>
     </div>
   );
