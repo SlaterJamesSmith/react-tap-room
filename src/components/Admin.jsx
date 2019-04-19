@@ -28,10 +28,6 @@ function Admin(){
            display: block;
          }
        `}</style>
-      <h3>phone: 1-800-FARMERS-MARKET | email: farmersmarket@loremipsum.com</h3>
-      <h4>The Farmer's Farm Farm</h4>
-      <h4>1234 Farmers Mkt Ave.</h4>
-      <h4>97992 Portland, OR</h4>
       <KegList/>
     </div>
   );

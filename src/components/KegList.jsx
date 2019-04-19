@@ -35,6 +35,7 @@ function KegList(){
            padding: 10px;
            color: skyblue;
            border: 3px solid skyblue;
+           text-align: center;
          }
          ul {
            padding: 8px;
@@ -45,7 +46,7 @@ function KegList(){
            margin-bottom: 0;
          }
        `}</style>
-      <h2>Visit us at the Farmers Market!</h2>
+      <h2>DRINKS ON TAP</h2>
       {postList.map((post, index) =>
         <Post beer={post.beer}
           brand={post.brand}
