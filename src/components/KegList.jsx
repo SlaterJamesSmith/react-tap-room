@@ -33,17 +33,17 @@ let postList = [
 
 function AddKeg(){
   postList.push({
-    beer: "TestBeer",
-    brand: "TestBrand",
-    percent: "TestPercent",
-    cost: "TestCost"
+    beer: 'TestBeer',
+    brand: 'TestBrand',
+    percent: 'TestPercent',
+    cost: 'TestCost'
   });
   console.log(postList);
 }
 
 function KegList(){
-  AddKeg();
   return (
+    AddKeg(),
     <div>
       <style jsx>{`
          div {

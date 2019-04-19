@@ -33,7 +33,7 @@ function Admin(){
        `}</style>
       <KegList/>
       <button onClick={AddKeg}>
-        Hello
+        Add Keg
       </button>
     </div>
   );
