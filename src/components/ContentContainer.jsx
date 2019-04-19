@@ -6,6 +6,40 @@ import Error404 from './Error404';
 import market from '../assets/images/market.jpeg';
 
 class ContentContainer extends React.Component{
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      postList: [
+        {
+          beer: 'Duff',
+          brand: 'Duff Beer',
+          percent: '100',
+          cost: '5'
+        },
+        {
+          beer: 'Duff Two',
+          brand: 'Duff Beer',
+          percent: '99',
+          cost: '3'
+        },
+        {
+          beer: 'Duffy the Vampire Slayer',
+          brand: 'Duff Beer',
+          percent: '101',
+          cost: '6'
+        }
+      ]
+    };
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+  }
+  
+  handleAddingNewKegToList(newKeg){
+    var newPostList = this.state.postList.slice();
+    newPostList.push(newTicket);
+    this.setState({postList: newPostList});
+  }
+  
   render(){
     return (
       <div>
@@ -42,7 +76,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' component={Locations} />
-          <Route path='/admin' component={Admin} />
+          <Route path='/admin' render={()=><Admin onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
