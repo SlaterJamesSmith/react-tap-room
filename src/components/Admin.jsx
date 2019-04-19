@@ -1,4 +1,5 @@
 import React from 'react';
+import KegList from './KegList'
 
 function Admin(){
   return (
@@ -31,6 +32,7 @@ function Admin(){
       <h4>The Farmer's Farm Farm</h4>
       <h4>1234 Farmers Mkt Ave.</h4>
       <h4>97992 Portland, OR</h4>
+      <KegList/>
     </div>
   );
 }
