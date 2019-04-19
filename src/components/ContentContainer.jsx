@@ -1,7 +1,7 @@
 import React from 'react';
 import Locations from './Locations';
 import { Switch, Route } from 'react-router-dom';
-import NewPostForm from './NewPostForm';
+import Admin from './Admin';
 import Error404 from './Error404';
 import market from '../assets/images/market.jpeg';
 
@@ -41,7 +41,7 @@ function ContentContainer(){
       <img src={market}/>
       <Switch>
         <Route exact path='/' component={Locations} />
-        <Route path='/contact' component={NewPostForm} />
+        <Route path='/contact' component={Admin} />
         <Route component={Error404} />
       </Switch>
     </div>

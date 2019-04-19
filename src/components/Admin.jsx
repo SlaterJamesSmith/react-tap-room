@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NewPostForm(){
+function Admin(){
   return (
     <div>
       <style jsx>{`
@@ -35,4 +35,4 @@ function NewPostForm(){
   );
 }
 
-export default NewPostForm;
+export default Admin;
