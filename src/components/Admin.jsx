@@ -1,11 +1,12 @@
 import React from 'react';
 import KegList from './KegList';
 import AddKeg from './KegList';
+import PropTypes from "prop-types";
 
 
 
-function Admin(){
-  return (
+class Admin extends React.Component {
+  render(){
     <div>
       <style jsx>{`
          div {
@@ -36,7 +37,11 @@ function Admin(){
         Add Keg
       </button>
     </div>
-  );
+  }
 }
+
+NewKegControl.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default Admin;
