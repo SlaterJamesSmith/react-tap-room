@@ -17,12 +17,14 @@ function Post(props){
          }
          li {
            display: block;
+           padding: 0;
+           margin-top: -10px;;
          }
        `}</style>
       <ul>
-        <li><h3>{props.beer}</h3></li>
-        <li><h4>{props.brand}</h4></li>
-        <li><p>{props.percent}%</p></li>
+        <li><h3>{props.beer} / {props.brand}</h3></li>
+        <li></li>
+        <li><p>ABV: {props.percent}%</p></li>
         <li><p>${props.cost}</p></li>
       </ul>
     </div>

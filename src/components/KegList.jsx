@@ -41,6 +41,8 @@ function KegList(){
          }
          li {
            display: block;
+           padding: 0;
+           margin-bottom: 0;
          }
        `}</style>
       <h2>Visit us at the Farmers Market!</h2>

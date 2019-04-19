@@ -1,5 +1,5 @@
 import React from 'react';
-import KegList from './KegList'
+import KegList from './KegList';
 
 function Admin(){
   return (
