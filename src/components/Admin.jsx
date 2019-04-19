@@ -1,8 +1,10 @@
 import React from 'react';
 import KegList from './KegList';
+import AddKeg from './KegList';
 
 function Admin(){
   return (
+    // AddKeg(),
     <div>
       <style jsx>{`
          div {
@@ -29,6 +31,7 @@ function Admin(){
          }
        `}</style>
       <KegList/>
+      <button>Hello</button>
     </div>
   );
 }

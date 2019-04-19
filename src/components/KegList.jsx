@@ -23,7 +23,17 @@ var postList = [
   }
 ];
 
+function AddKeg(){
+  postList.push({
+    beer: 'Test',
+    brand: 'Test',
+    percent: 'Test',
+    cost: 'Test'
+  });
+}
+
 function KegList(){
+  AddKeg();
   return (
     <div>
       <style jsx>{`
