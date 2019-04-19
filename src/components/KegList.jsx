@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import Admin from './Admin';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
 
 let postList = [
@@ -32,22 +32,12 @@ let postList = [
 //     percent: percent,
 //     cost: cost
 
-function AddKeg(){
-  postList.push({
-    beer: 'TestBeer',
-    brand: 'TestBrand',
-    percent: 'TestPercent',
-    cost: 'TestCost'
-  });
-);
-  console.log(postList);
-  
-}
+
 
 function KegList(){
   return (
     AddKeg(),
-    <div>
+    <div id='root'>
       <style jsx>{`
          div {
            font-family: arial;
@@ -69,16 +59,30 @@ function KegList(){
          }
        `}</style>
       <h2>DRINKS ON TAP</h2>
-      {postList.map((post, index) =>
-        <Post beer={post.beer}
-          brand={post.brand}
-          percent={post.percent}
-          cost={post.cost}
-          key={index} />
-      )}
-
+        {postList.map((post, index) =>
+          <Post beer={post.beer}
+            brand={post.brand}
+            percent={post.percent}
+            cost={post.cost}
+            key={index} />
+        )}
     </div>
   );
+}
+
+function AddKeg(){
+  postList.push({
+    beer: 'TestBeer',
+    brand: 'TestBrand',
+    percent: 'TestPercent',
+    cost: 'TestCost'
+  });
+  ReactDOM.render(
+    <KegList />,
+    document.getElementById('root')
+  );
+  console.log(postList);
+  
 }
 
 
