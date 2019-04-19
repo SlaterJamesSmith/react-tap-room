@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import Admin from './Admin';
+import ReactDOM from 'react-dom';
 
 
 let postList = [
@@ -38,7 +39,9 @@ function AddKeg(){
     percent: 'TestPercent',
     cost: 'TestCost'
   });
+  ReactDOM.render(element, document.getElementById('root'));
   console.log(postList);
+  
 }
 
 function KegList(){
