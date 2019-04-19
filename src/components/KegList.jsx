@@ -1,8 +1,9 @@
 import React from 'react';
 import Post from './Post';
+import Admin from './Admin';
 
 
-var postList = [
+let postList = [
   {
     beer: 'Duff',
     brand: 'Duff Beer',
@@ -23,13 +24,21 @@ var postList = [
   }
 ];
 
+// function AddKeg(beer, brand, percent, cost){
+//   postList.push({
+//     beer: beer,
+//     brand: brand,
+//     percent: percent,
+//     cost: cost
+
 function AddKeg(){
   postList.push({
-    beer: 'Test',
-    brand: 'Test',
-    percent: 'Test',
-    cost: 'Test'
+    beer: "TestBeer",
+    brand: "TestBrand",
+    percent: "TestPercent",
+    cost: "TestCost"
   });
+  console.log(postList);
 }
 
 function KegList(){
