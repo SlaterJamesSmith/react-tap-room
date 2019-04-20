@@ -1,29 +1,29 @@
 import React from 'react';
 import Post from './Post';
-import Admin from './Admin';
+// import Admin from './Admin';
 // import ReactDOM from 'react-dom';
 
-
-let postList = [
-  {
-    beer: 'Duff',
-    brand: 'Duff Beer',
-    percent: '100',
-    cost: '5'
-  },
-  {
-    beer: 'Duff Two',
-    brand: 'Duff Beer',
-    percent: '99',
-    cost: '3'
-  },
-  {
-    beer: 'Duffy the Vampire Slayer',
-    brand: 'Duff Beer',
-    percent: '101',
-    cost: '6'
-  }
-];
+let postList;
+// let postList = [
+//   {
+//     beer: 'Duff',
+//     brand: 'Duff Beer',
+//     percent: '100',
+//     cost: '5'
+//   },
+//   {
+//     beer: 'Duff Two',
+//     brand: 'Duff Beer',
+//     percent: '99',
+//     cost: '3'
+//   },
+//   {
+//     beer: 'Duffy the Vampire Slayer',
+//     brand: 'Duff Beer',
+//     percent: '101',
+//     cost: '6'
+//   }
+// ];
 
 // function AddKeg(beer, brand, percent, cost){
 //   postList.push({
@@ -40,14 +40,14 @@ function AddKeg(){
     cost: 'TestCost'
   });
 
-  console.log(postList);
+  // console.log(postList);
   
 }
 
 function KegList(){
   return (
     AddKeg(),
-    <div id='root'>
+    <div>
       <style jsx>{`
          div {
            font-family: arial;

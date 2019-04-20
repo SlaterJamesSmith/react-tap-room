@@ -36,7 +36,7 @@ class ContentContainer extends React.Component{
   
   handleAddingNewKegToList(newKeg){
     var newPostList = this.state.postList.slice();
-    newPostList.push(newTicket);
+    newPostList.push(newKeg);
     this.setState({postList: newPostList});
   }
   
