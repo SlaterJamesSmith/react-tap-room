@@ -14,10 +14,10 @@ class Admin extends React.Component {
     };
   }  
   
-  handleClick(){
-    this.setState({buttonClicked: true});
-    console.log('Hey, you clicked me! I do not have code to change my state quite yet, but I will in a moment!');
-  }
+  // handleClick(){
+  //   this.setState({buttonClicked: true});
+  //   console.log('Hey, you clicked me! I do not have code to change my state quite yet, but I will in a moment!');
+  // }
   
   render(){
     <div>
