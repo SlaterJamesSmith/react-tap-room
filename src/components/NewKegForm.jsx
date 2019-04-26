@@ -20,6 +20,12 @@ function NewKegForm(props){
     _formVisibleOnPage = true;
   }
 
+  function handleCancel(event) {
+    event.preventDefault();
+    props.onNewKegForm({formVisibleOnPage: _formVisibleOnPage});
+    _formVisibleOnPage = false;
+  }
+
   return (
     <div>
     <style jsx>{`
@@ -49,6 +55,7 @@ function NewKegForm(props){
           placeholder='Cost'
           ref={(input) => {_cost = input;}}/></li>
         <button type='submit'>Submit</button>
+        <button type='submit' onClick={handleCancel}>Cancel</button>
       </form>
     </div>
   );
