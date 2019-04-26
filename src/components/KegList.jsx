@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from './Post';
+import Keg from './Keg';
 
 
 var postList = [
@@ -48,7 +48,7 @@ function KegList(){
        `}</style>
       <h2>DRINKS ON TAP</h2>
       {postList.map((post, index) =>
-        <Post beer={post.beer}
+        <Keg beer={post.beer}
           brand={post.brand}
           percent={post.percent}
           cost={post.cost}

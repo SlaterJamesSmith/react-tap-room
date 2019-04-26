@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Post(props){
+function Keg(props){
   return (
     <div>
       <style jsx>{`
@@ -31,11 +31,11 @@ function Post(props){
   );
 }
 
-Post.propTypes = {
+Keg.propTypes = {
   beer: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   percent: PropTypes.string.isRequired,
   cost: PropTypes.string.isRequired
 };
 
-export default Post;
+export default Keg;
