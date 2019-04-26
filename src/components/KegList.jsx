@@ -2,7 +2,7 @@ import React from 'react';
 import Keg from './Keg';
 
 
-var postList = [
+var kegList = [
   {
     beer: 'Duff',
     brand: 'Duff Beer',
@@ -47,11 +47,11 @@ function KegList(){
          }
        `}</style>
       <h2>DRINKS ON TAP</h2>
-      {postList.map((post, index) =>
-        <Keg beer={post.beer}
-          brand={post.brand}
-          percent={post.percent}
-          cost={post.cost}
+      {kegList.map((keg, index) =>
+        <Keg beer={keg.beer}
+          brand={keg.brand}
+          percent={keg.percent}
+          cost={keg.cost}
           key={index} />
       )}
 
