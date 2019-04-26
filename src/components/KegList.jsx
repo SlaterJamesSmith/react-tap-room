@@ -47,12 +47,12 @@ function KegList(){
          }
        `}</style>
       <h2>DRINKS ON TAP</h2>
-      {kegList.map((keg, index) =>
+      {kegList.map((keg) =>
         <Keg beer={keg.beer}
           brand={keg.brand}
           percent={keg.percent}
           cost={keg.cost}
-          key={index} />
+          key={keg.id} />
       )}
 
     </div>

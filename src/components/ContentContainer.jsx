@@ -1,5 +1,5 @@
 import React from 'react';
-import PatronView from './PatronView';
+import KegList from './KegList';
 import { Switch, Route } from 'react-router-dom';
 import KegControl from './KegControl';
 import Error404 from './Error404';
@@ -56,7 +56,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <img src={market}/>
         <Switch>
-          <Route exact path='/' component={PatronView} />
+          <Route exact path='/' component={KegList} />
           <Route path='/admin' component={KegControl} />
           <Route component={Error404} />
         </Switch>
