@@ -63,7 +63,7 @@ class KegControl extends React.Component {
 }
 
 KegControl.propTypes = {
-  formVisibleOnPage: PropTypes.boolean
+  formVisibleOnPage: PropTypes.func
 };
 
 export default KegControl;
