@@ -10,11 +10,15 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+    this.handleShowingForm = this.handleShowingForm.bind(this);
   }
 
-  handleTroubleshootingConfirmation(){
+  handleShowingForm(){
     this.setState({formVisibleOnPage: true});
+  }
+
+  handleHidingForm(){
+    this.setState({formVisibleOnPage: false});
   }
 
   render(){
@@ -49,7 +53,7 @@ class KegControl extends React.Component {
            }
          `}</style>
         {currentlyVisibleContent}
-        <button onClick={this.handleTroubleshootingConfirmation}>
+        <button onClick={this.handleShowingForm}>
           Add New Keg
         </button>
       </div>

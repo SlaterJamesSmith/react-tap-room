@@ -28,7 +28,7 @@ function NewKegForm(props){
         <li><input
           type='text'
           id='beer'
-          placeholder='Pair Names'
+          placeholder='Beer Name'
           ref={(input) => {_beer = input;}}/></li>
         <li><input
           type='text'
