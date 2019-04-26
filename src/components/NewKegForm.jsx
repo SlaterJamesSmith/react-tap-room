@@ -19,28 +19,33 @@ function NewKegForm(props){
 
   return (
     <div>
+    <style jsx>{`
+      li {
+        display: block;
+      }
+     `}</style>
       <form onSubmit={handleNewKegFormSubmission}>
-        <input
+        <li><input
           type='text'
           id='beer'
           placeholder='Pair Names'
-          ref={(input) => {_beer = input;}}/>
-        <input
+          ref={(input) => {_beer = input;}}/></li>
+        <li><input
           type='text'
           id='brand'
-          placeholder='brand'
-          ref={(input) => {_brand = input;}}/>
-        <input
+          placeholder='Brand'
+          ref={(input) => {_brand = input;}}/></li>
+        <li><input
           type='text'
           id='percent'
-          placeholder='percent.'
-          ref={(input) => {_percent = input;}}/>
-          <input
-            type='text'
-            id='cost'
-            placeholder='cost.'
-            ref={(input) => {_cost = input;}}/>
-        <button type='submit'>Help!</button>
+          placeholder='Percentage'
+          ref={(input) => {_percent = input;}}/></li>
+        <li><input
+          type='text'
+          id='cost'
+          placeholder='Cost'
+          ref={(input) => {_cost = input;}}/></li>
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );
