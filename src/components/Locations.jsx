@@ -1,5 +1,4 @@
 import React from 'react';
-import AvailableProduce from './AvailableProduce';
 import KegList from './KegList';
 
 function Locations(){
@@ -9,11 +8,10 @@ function Locations(){
         div {
           display: grid;
           grid-gap: 1em;
-          grid-template-columns: 200px auto;
+          grid-template-columns: auto;
         }
        `}</style>
       <KegList/>
-      <AvailableProduce/>
     </div>
   );
 }
