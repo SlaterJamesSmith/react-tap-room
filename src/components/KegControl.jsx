@@ -11,20 +11,21 @@ class KegControl extends React.Component {
       formVisibleOnPage: false
     };
     this.handleShowingForm = this.handleShowingForm.bind(this);
+    this.handleHidingForm = this.handleHidingForm.bind(this);
   }
 
   handleShowingForm(){
     this.setState({formVisibleOnPage: true});
   }
 
-  // handleHidingForm(){
-  //   this.setState({formVisibleOnPage: false});
-  // }
+  handleHidingForm(handler){
+    this.setState({formVisibleOnPage: false});
+  }
 
   render(){
-    let currentlyVisibleContent = false;
+    let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
+      currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation} onNewKegForm={this.handleHidingForm}/>;
     }
     return (
       <div>
@@ -61,8 +62,8 @@ class KegControl extends React.Component {
   }
 }
 
-NewKegForm.propTypes = {
-  onNewKegCreation: PropTypes.func
+KegControl.propTypes = {
+  formVisibleOnPage: PropTypes.boolean
 };
 
 export default KegControl;

@@ -7,14 +7,17 @@ function NewKegForm(props){
   let _brand = null;
   let _percent = null;
   let _cost = null;
+  let _formVisibleOnPage = true;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({beer: _beer.value, brand: _brand.value, percent: _percent.value, cost: _cost.value, id: v4()});
+    props.onNewKegForm({formVisibleOnPage: _formVisibleOnPage});
     _beer.value = '';
     _brand.value = '';
     _percent.value = '';
     _cost.value = '';
+    _formVisibleOnPage = true;
   }
 
   return (
@@ -52,7 +55,8 @@ function NewKegForm(props){
 }
 
 NewKegForm.propTypes = {
-  onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func,
+  onNewKegForm: PropTypes.func
 };
 
 export default NewKegForm;

@@ -41,8 +41,4 @@ function KegList(props){
   );
 }
 
-KegList.propTypes = {
-  kegList: PropTypes.array
-};
-
 export default KegList;

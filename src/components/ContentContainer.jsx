@@ -39,9 +39,6 @@ class ContentContainer extends React.Component{
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
-    this.setState(state => ({
-      open: !state.open
-    }));
   }
 
   render(){
