@@ -1,7 +1,7 @@
 import React from 'react';
 import KegList from './KegList';
 
-function Locations(){
+function PatronView(){
   return (
     <div>
       <style jsx>{`
@@ -16,4 +16,4 @@ function Locations(){
   );
 }
 
-export default Locations;
+export default PatronView;

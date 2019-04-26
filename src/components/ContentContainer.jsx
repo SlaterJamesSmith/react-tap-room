@@ -1,5 +1,5 @@
 import React from 'react';
-import Locations from './Locations';
+import PatronView from './PatronView';
 import { Switch, Route } from 'react-router-dom';
 import Admin from './Admin';
 import Error404 from './Error404';
@@ -40,7 +40,7 @@ function ContentContainer(){
        `}</style>
       <img src={market}/>
       <Switch>
-        <Route exact path='/' component={Locations} />
+        <Route exact path='/' component={PatronView} />
         <Route path='/admin' component={Admin} />
         <Route component={Error404} />
       </Switch>
