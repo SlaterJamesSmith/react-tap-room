@@ -10,6 +10,7 @@ class ContentContainer extends React.Component{
   constructor(props) {
   super(props);
     this.state = {
+      formVisibleOnPage: false,
       masterKegList: [
         {
           beer: 'Duff',
@@ -38,6 +39,9 @@ class ContentContainer extends React.Component{
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
+    this.setState(state => ({
+      open: !state.open
+    }));
   }
 
   render(){
