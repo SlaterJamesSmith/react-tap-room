@@ -10,7 +10,26 @@ class ContentContainer extends React.Component{
   constructor(props) {
   super(props);
     this.state = {
-      masterKegList: []
+      masterKegList: [
+        {
+          beer: 'Duff',
+          brand: 'Duff Beer',
+          percent: '100',
+          cost: '5'
+        },
+        {
+          beer: 'Duff Two',
+          brand: 'Duff Beer',
+          percent: '99',
+          cost: '3'
+        },
+        {
+          beer: 'Duffy the Vampire Slayer',
+          brand: 'Duff Beer',
+          percent: '101',
+          cost: '6'
+        }
+      ]
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
@@ -56,7 +75,7 @@ class ContentContainer extends React.Component{
          `}</style>
         <img src={market}/>
         <Switch>
-          <Route exact path='/' component={KegList} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
           <Route path='/admin' component={KegControl} />
           <Route component={Error404} />
         </Switch>

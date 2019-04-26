@@ -48,7 +48,6 @@ class KegControl extends React.Component {
              display: block;
            }
          `}</style>
-        <KegList/>
         {currentlyVisibleContent}
         <button onClick={this.handleTroubleshootingConfirmation}>
           Add New Keg
