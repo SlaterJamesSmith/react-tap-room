@@ -76,7 +76,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' component={KegControl} />
+          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} />}/>
           <Route component={Error404} />
         </Switch>
       </div>
