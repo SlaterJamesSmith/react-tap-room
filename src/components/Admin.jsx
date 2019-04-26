@@ -1,5 +1,6 @@
 import React from 'react';
 import KegList from './KegList';
+import KegControl from './KegControl';
 
 function Admin(){
   return (
@@ -29,6 +30,7 @@ function Admin(){
          }
        `}</style>
       <KegList/>
+      <KegControl/>
     </div>
   );
 }
