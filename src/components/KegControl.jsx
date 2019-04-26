@@ -24,8 +24,10 @@ class KegControl extends React.Component {
 
   render(){
     let currentlyVisibleContent = null;
+    let buttonVisible = <button onClick={this.handleShowingForm}>Add New Keg</button>;
     if (this.state.formVisibleOnPage){
       currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation} onNewKegForm={this.handleHidingForm}/>;
+      buttonVisible = null;
     }
     return (
       <div>
@@ -54,9 +56,7 @@ class KegControl extends React.Component {
            }
          `}</style>
         {currentlyVisibleContent}
-        <button onClick={this.handleShowingForm}>
-          Add New Keg
-        </button>
+        {buttonVisible}
       </div>
     );
   }
