@@ -1,37 +1,39 @@
-## Taproom/Pub Menu App
-#### _Angular practice, homework as assigned by Epicodus, 3/27/19_
+## Taproom/Pub Menu React App
+#### _React practice, homework as assigned by Epicodus, 3/27/19_
 
 #### Slater Smith
 
 ### Description
 
-Application built for Angular practice using example persona stories from Epicodus homework assignment. The application is meant to provide potential bar/pub employees with a tool for entering and editing information about the beers it carries on tap.
+Application built for React routing and state management practice using example persona stories from Epicodus homework assignment. The application is meant to provide potential bar/pub employees with a tool for entering and editing information about the beers it carries on tap.
 
 #### Program behavior specifications:
 | Behavior | Input | Output |
 | --------------------------- | ------------------- | ------------------- |
-| If a user submits information into form, a new keg with inputed specs will appear| User enters new beet name, brand, price, and alcohol percentage into respective form inputs and clicks 'submit' | New keg information appears below default list |
-| User can edit existing information for any existing keg| User clicks 'Edit' button below list starting with 'keg2' | New form appears at the bottom of the page |
-| Edited keg information is saved in by the browser | After clicking 'Edit' the user enters new information in the new form inputs and clicks 'Done'| New inputted content is saved to its respective list item |
+| If a user submits information into form in admin view, a new keg with inputed specs will appear in the list window| User navigates to 'admin' in top menu and enters new beer name, brand, price, and alcohol percentage into respective form inputs and clicks 'submit' | New keg information appears next to default data when user navigates to 'list' view |
 
 
 ### Technologies and Resources
 
-* Angular
+* React
 * npm & Node
 
 ### Component Tree
 
-![Component Tree](./src/assets/images/app-tree.png)
+![Component Tree](./src/assets/images/final-tree.png)
 
+### Roadmap / Future Behavior Specifications:
 
+| Behavior | Input | Output |
+| --------------------------- | ------------------- | ------------------- |
+| User can edit existing information for any existing keg| User clicks 'Edit' button next to any taplist item in the admin view | New form appears at the bottom of the page |
+| Edited keg information is saved by the browser | After clicking 'Edit' the user enters new information in the new form inputs and clicks 'Done'| New inputted content is saved to its respective list item in the 'list' view |
+| User can remove any keg | User clicks 'Remove Keg' next to any desired keg in the admin view| Keg is removed from list view |
+
+**Notes:**
+- Had trouble successfully showing 'KegList' component simultaneously in 'list' view and 'admin' view because of data flow issues.
 
 ### License
 
 *This software is licensed under the MIT license*
 Copyright (c) 2019 **_Slater Smith_**
-
-**Notes:**
-- So far, I'm able to store data across components, but can't yet get it to render when updated. 1:20pm 4/19/19
-- Working on states, but can't get ReactDOM to work 2:37pm 4/19/19
-- Trying to pass data to grandchild component, but unsure whether I need to refactor child component function into a class to do so 4:06pm 4/19/19

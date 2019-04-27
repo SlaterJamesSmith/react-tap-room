@@ -13,19 +13,25 @@ class ContentContainer extends React.Component{
       formVisibleOnPage: false,
       masterKegList: [
         {
-          beer: 'Duff',
+          beer: 'The Duff Original IPA',
           brand: 'Duff Beer',
           percent: '100',
           cost: '5'
         },
         {
-          beer: 'Duff Two',
+          beer: 'Duff Love',
           brand: 'Duff Beer',
           percent: '99',
           cost: '3'
         },
         {
           beer: 'Duffy the Vampire Slayer',
+          brand: 'Duff Beer',
+          percent: '101',
+          cost: '6'
+        },
+        {
+          beer: 'Duff and Duffer',
           brand: 'Duff Beer',
           percent: '101',
           cost: '6'
