@@ -22,6 +22,15 @@ Application built for React routing and state management practice using example 
 
 ![Component Tree](./src/assets/images/final-tree.png)
 
+### Setup Instructions
+
+1. Clone this repository to your desktop at https://github.com/SlaterJamesSmith/react-taproom-app
+2. Use a terminal of your choice to access the webpage and its files by inputting: "git clone {the above clone link}"
+3. If homebrew is not yet installed on your Mac, install it by running the following command in your terminal: "$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+4. If you are not using a Mac, and homebrew is not yet installed, go to the node website and follow appropriate installer for your operating system at https://nodejs.org/en/download/
+5. Navigate into your new directory and run '$ npm i' and then 'npm run start'
+6. In your preferred web browser, got to url 'localhost:8080'
+
 ### Roadmap / Future Behavior Specifications:
 
 | Behavior | Input | Output |
