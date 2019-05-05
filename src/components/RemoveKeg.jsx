@@ -1,7 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keg(props){
+function RemoveKeg(props){
+  let _id = null;
+
+  function handleRemoveKeg(event) {
+    event.preventDefault();
+
+    props.onRemoveKeg('mock1');
+    _id = props.id;
+  }
+
+
   return (
     <div>
       <style jsx>{`
@@ -26,17 +36,21 @@ function Keg(props){
         <li></li>
         <li><p>ABV: {props.percent}%</p></li>
         <li><p>${props.cost}</p></li>
+        <li><p>ID: {props.id}</p></li>
+        <button onClick={handleRemoveKeg}>Remove</button>
+        <button>Edit</button>
       </ul>
     </div>
   );
 }
 
-Keg.propTypes = {
+RemoveKeg.propTypes = {
   beer: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   percent: PropTypes.string.isRequired,
   cost: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired
+  id: PropTypes.string,
+  _id: PropTypes.func
 };
 
-export default Keg;
+export default RemoveKeg;

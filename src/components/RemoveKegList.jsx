@@ -1,12 +1,11 @@
 import React from 'react';
-import Keg from './Keg';
+import RemoveKeg from './RemoveKeg';
 import PropTypes from 'prop-types';
 
 
 
 
-function KegList(props){
-  console.log(props.kegList);
+function RemoveKegList(props){
   return (
     <div>
       <style jsx>{`
@@ -31,15 +30,17 @@ function KegList(props){
        `}</style>
       <h2>DRINKS ON TAP</h2>
       {props.kegList.map((keg) =>
-        <Keg beer={keg.beer}
+        <RemoveKeg onRemoveKeg={this.props.onRemoveKeg}
+          beer={keg.beer}
           brand={keg.brand}
           percent={keg.percent}
           cost={keg.cost}
-          key={keg.id} />
+          id={keg.id} />
       )}
 
     </div>
   );
 }
 
-export default KegList;
+
+export default RemoveKegList;

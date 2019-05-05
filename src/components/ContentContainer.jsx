@@ -16,29 +16,34 @@ class ContentContainer extends React.Component{
           beer: 'The Duff Original IPA',
           brand: 'Duff Beer',
           percent: '100',
-          cost: '5'
+          cost: '5',
+          id: 'mock1'
         },
         {
           beer: 'Duff Love',
           brand: 'Duff Beer',
           percent: '99',
-          cost: '3'
+          cost: '3',
+          id: 'mock2'
         },
         {
           beer: 'Duffy the Vampire Slayer',
           brand: 'Duff Beer',
           percent: '101',
-          cost: '6'
+          cost: '6',
+          id: 'mock3'
         },
         {
           beer: 'Duff and Duffer',
           brand: 'Duff Beer',
           percent: '101',
-          cost: '6'
+          cost: '6',
+          id: 'mock4'
         }
       ]
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleRemoveKegFromList = this.handleRemoveKegFromList.bind(this);
   }
 
   handleAddingNewKegToList(newKeg){
@@ -46,6 +51,24 @@ class ContentContainer extends React.Component{
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
   }
+
+//NOT YET FUNCTIONAL
+  handleRemoveKegFromList(removeKegId){
+    console.log('hellllooooooo')
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.forEach(function(masterKeg) {
+      if (masterKeg.id === removeKegId) {
+        newMasterKegList.slice(newMasterKegList[masterKeg], (newMasterKegList[masterKeg] + 1))
+      }
+    this.setState({masterKegList: newMasterKegList});
+  })
+
+
+
+    newMasterKegList.slice(removeKeg);
+    this.setState({masterKegList: newMasterKegList});
+  }
+//NOT YET FUNCTIONAL
 
   render(){
     return (
@@ -83,7 +106,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} />}/>
+          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} onRemoveKeg={this.handleRemoveKegFromList}/>} />
           <Route component={Error404} />
         </Switch>
       </div>
