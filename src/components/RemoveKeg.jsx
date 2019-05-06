@@ -8,7 +8,7 @@ function RemoveKeg(props){
 
   function handleRemoveKeg(event) {
     event.preventDefault();
-    props.onRemoveKeg(true);
+    props.onRemoveKeg(props.id);
     // props.onRemoveKeg({id: _id});
     _id = props.id;
     console.log(props.id);

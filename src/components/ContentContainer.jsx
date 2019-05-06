@@ -54,19 +54,22 @@ class ContentContainer extends React.Component{
 
 //NOT YET FUNCTIONAL
   handleRemoveKegFromList(removeKegId){
-    console.log('hellllooooooo')
+
     var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.forEach(function(masterKeg) {
+    newMasterKegList.forEach((masterKeg, index) => {
       if (masterKeg.id === removeKegId) {
-        newMasterKegList.slice(newMasterKegList[masterKeg], (newMasterKegList[masterKeg] + 1))
+        console.log(masterKeg.id)
+        console.log(index)
+        newMasterKegList.splice(index, index + 1)
       }
-    this.setState({masterKegList: newMasterKegList});
   })
+  this.setState({masterKegList: newMasterKegList});
+  console.log(this.state)
 
 
-
-    newMasterKegList.slice(removeKeg);
-    this.setState({masterKegList: newMasterKegList});
+    //
+    // newMasterKegList.slice(removeKeg);
+    // this.setState({masterKegList: newMasterKegList});
   }
 //NOT YET FUNCTIONAL
 
@@ -106,7 +109,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} onRemoveKeg={this.handleRemoveKeg}/>} />
+          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} onRemoveKeg={this.handleRemoveKegFromList}/>} />
           <Route component={Error404} />
         </Switch>
       </div>
