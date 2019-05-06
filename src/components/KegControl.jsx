@@ -58,7 +58,7 @@ class KegControl extends React.Component {
          `}</style>
         {currentlyVisibleContent}
         {buttonVisible}
-        <RemoveKegList onRemoveKeg kegList={this.props.removeKegList} />
+        <RemoveKegList onRemoveKeg={this.props.onRemoveKeg} kegList={this.props.removeKegList} />
       </div>
     );
   }

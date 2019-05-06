@@ -106,7 +106,7 @@ class ContentContainer extends React.Component{
         <img src={market}/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} onRemoveKeg={this.handleRemoveKegFromList}/>} />
+          <Route path='/admin' render={()=><KegControl onNewKegCreation={this.handleAddingNewKegToList} removeKegList={this.state.masterKegList} onRemoveKeg={this.handleRemoveKeg}/>} />
           <Route component={Error404} />
         </Switch>
       </div>

@@ -30,7 +30,7 @@ function RemoveKegList(props){
        `}</style>
       <h2>DRINKS ON TAP</h2>
       {props.kegList.map((keg) =>
-        <RemoveKeg onRemoveKeg={this.props.onRemoveKeg}
+        <RemoveKeg onRemoveKeg={props.onRemoveKeg}
           beer={keg.beer}
           brand={keg.brand}
           percent={keg.percent}

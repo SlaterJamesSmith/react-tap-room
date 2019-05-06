@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 function RemoveKeg(props){
   let _id = null;
 
+
+
   function handleRemoveKeg(event) {
     event.preventDefault();
-
-    props.onRemoveKeg('mock1');
+    props.onRemoveKeg(true);
+    // props.onRemoveKeg({id: _id});
     _id = props.id;
+    console.log(props.id);
   }
 
 
@@ -50,7 +53,10 @@ RemoveKeg.propTypes = {
   percent: PropTypes.string.isRequired,
   cost: PropTypes.string.isRequired,
   id: PropTypes.string,
-  _id: PropTypes.func
+  // remove: PropTypes.boolean,
+  _id: PropTypes.func,
+
+  onRemoveKeg: PropTypes.func
 };
 
 export default RemoveKeg;
