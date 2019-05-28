@@ -41,7 +41,6 @@ function RemoveKeg(props){
         <li><p>${props.cost}</p></li>
         <li><p>ID: {props.id}</p></li>
         <button onClick={handleRemoveKeg}>Remove</button>
-        <button>Edit</button>
       </ul>
     </div>
   );
