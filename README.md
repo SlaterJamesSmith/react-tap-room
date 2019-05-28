@@ -39,8 +39,9 @@ Application built for React routing and state management practice using example 
 | Edited keg information is saved by the browser | After clicking 'Edit' the user enters new information in the new form inputs and clicks 'Done'| New inputted content is saved to its respective list item in the 'list' view |
 | User can remove any keg | User clicks 'Remove Keg' next to any desired keg in the admin view| Keg is removed from list view |
 
-**Notes:**
-- Had trouble successfully showing 'KegList' component simultaneously in 'list' view and 'admin' view because of data flow issues.
+Technologies Used: 
+- React
+- jsx
 
 ### License
 
