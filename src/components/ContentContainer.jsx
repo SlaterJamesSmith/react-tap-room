@@ -60,7 +60,7 @@ class ContentContainer extends React.Component{
       if (masterKeg.id === removeKegId) {
         console.log(masterKeg.id)
         console.log(index)
-        newMasterKegList.splice(index, index + 1)
+        newMasterKegList.splice(index, 1)
       }
   })
   this.setState({masterKegList: newMasterKegList});
